@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Flappy bird game is a bird game this game you can play easily in our spacebar counter tool." />
+    <meta name="keywords" content="flappy bird game, fluffy bird game, flappy, spacebar counter">
+    <meta name="author" content="spacebarcounter.org" />
+    <title>Flappy Bird Game | spacebarcounter.org</title>
+    <link rel="icon" href="../static/assets/images/spacebarcounter.png" type="#" alt="spacebarcounter">
+    <script type="56977b04cd25e2a83ce8b9e6-text/javascript">
+        document.onkeydown = function(e) {
+            var keyCode = e.keyCode || e.charCode;
+            if (keyCode == 32) e.preventDefault();
+        };
+    </script>
+    <link href="../static/assets/css/main.css" rel="stylesheet" />
+    <link rel="canonical" href="flappy-bird.html">
+    <link href="../static/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../static/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="../static/assets/css/sidebar-menu.css" rel="stylesheet" />
+    <link href="../static/assets/css/app-style.css" rel="stylesheet" />
+    <script type="56977b04cd25e2a83ce8b9e6-text/javascript">
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MCX7PNZ');
+    </script>
+    <style type="text/css">
+        .NR-Ads {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-height: 70px;
+            max-height: 90px;
+            padding: 5px 5px;
+            box-shadow: 0 -6px 18px 0 rgba(9, 32, 76, .1);
+            -webkit-transition: all .1s ease-in;
+            transition: all .1s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fefefe;
+            z-index: 20
+        }
+
+        .NR-Ads-close {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px 0 0;
+            position: absolute;
+            right: 0;
+            top: -30px;
+            background-color: #fefefe;
+            box-shadow: 0 -6px 18px 0 rgba(9, 32, 76, .08)
+        }
+
+        .NR-Ads .NR-Ads-close svg {
+            width: 22px;
+            height: 22px;
+            fill: #000
+        }
+
+        .NR-Ads .NR-Ads-content {
+            overflow: hidden;
+            display: block;
+            position: relative;
+            height: 70px;
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 10px
+        }
+
+        .fa-mouse-pointer:before {
+            content: "\f245"
+        }
+
+        .col,
+        .col-1,
+        .col-10,
+        .col-11,
+        .col-12,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            padding-right: 12.5px;
+            padding-left: 12.5px
+        }
+
+        .h1,
+        h1 {
+            font-size: 30px !important;
+            line-height: 32px !important
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0
+        }
+
+        .text-uppercase {
+            text-transform: uppercase !important
+        }
+
+        .sidebar-menu>li.active>a,
+        .sidebar-menu>li:hover>a {
+            color: #fff;
+            background: rgba(255, 255, 255, .15)
+        }
+
+        html {
+            font-family: Mukta, sans-serif;
+            font-family: Roboto, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        html {
+            height: 100%
+        }
+
+        @-ms-viewport {
+            width: device-width
+        }
+
+        body {
+            background-color: #3b3752;
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, .85);
+            letter-spacing: 1px
+        }
+
+        /*! * Bootstrap v4.3.1 (https://getbootstrap.com/) * Copyright 2011-2019 The Bootstrap Authors * Copyright 2011-2019 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #dc3545;
+            --orange: #fd7e14;
+            --yellow: #ffc107;
+            --green: #28a745;
+            --teal: #20c997;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        #wrapper.toggled .content-wrapper {
+            margin-left: 0
+        }
+
+        .content-wrapper {
+            margin-left: 250px;
+            padding-top: 70px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 70px;
+            overflow-x: hidden;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease
+        }
+
+        @media only screen and (max-width:1024px) {
+            .content-wrapper {
+                margin-left: 0;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+
+            #wrapper.toggled .content-wrapper {
+                margin-left: 0
+            }
+        }
+
+        .logo-text {
+            color: #fff;
+            font-size: 15px;
+            display: inline-block;
+            text-transform: uppercase;
+            position: relative;
+            top: 3px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 50px
+        }
+
+        .sidebar-menu>li {
+            position: relative;
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent
+        }
+
+        a {
+            outline: 0 !important;
+            color: #fff
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            color: #fff
+        }
+
+        .waves-effect {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            vertical-align: middle;
+            z-index: 1;
+            will-change: opacity, transform;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            transition: all .3s ease-out
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        .row {
+            margin-right: -12.5px;
+            margin-left: -12.5px
+        }
+
+        .mt-3,
+        .my-3 {
+            margin-top: 1rem !important
+        }
+
+        .card {
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+            border: none;
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .gradient-deepblue {
+            background: #6a11cb;
+            background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc) !important;
+            background: linear-gradient(45deg, #6a11cb, #2575fc) !important
+        }
+
+        .gradient-orange {
+            background: #fc4a1a;
+            background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733) !important;
+            background: linear-gradient(45deg, #fc4a1a, #f7b733) !important
+        }
+
+        .gradient-ohhappiness {
+            background: #00b09b;
+            background: -webkit-linear-gradient(45deg, #00b09b, #96c93d) !important;
+            background: linear-gradient(45deg, #00b09b, #96c93d) !important
+        }
+
+        .icon-user:before {
+            content: "\e005"
+        }
+    </style>
+    
+     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    
+     <link rel="stylesheet" href="../src/style.css" />
+    
+</head>
+
+<body class="bg-theme">
+   
+       <header class="topbar-nav">
+            <div class="navbar desktop-menu">
+                <div class="logo">
+                  <a href="#"><img src="../src/logo.png" alt="my-logo" /></a>
+                </div>
+                <div id="menuSection" class="menu-sec">
+                  <ul class="nav-menu">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="social-icons">
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-github"></i>
+                  <i class="fas fa-basketball-ball"></i>
+                </div>
+              </div>
+              <div
+                onclick="closeMobMenuToggle()"
+                id="mobMenuCont"
+                class="mob-menu-container"
+              >
+                <img src="../src/close.png" alt="close-icon" />
+              </div>
+              <div id="mobMenuWrap" class="mob-menu-wrap">
+                <div class="menu-content">
+                  <div class="menu-items">
+                    <ul class="nav-menu">
+                      <li><a class="active" href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="social-items">
+                    <div class="social-icons">
+                      <i class="fab fa-facebook"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-github"></i>
+                      <i class="fas fa-basketball-ball"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-menu">
+                <div class="logo">
+                  <a href="#"><img src="../src/logo.png" alt="my-logo" /></a>
+                </div>
+                <button onclick="mobMenuToggle()" class="menu"><i style="font-size:24px" class="fa">&#xf0c9;</i></button>
+              <script type="text/javascript" src="src/script.js"></script>
+
+              </div>
+        </header>
+    
+    
+    <div class="clearfix"></div>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                
+                <div class="col-lg-12">
+                    <div class="card">
+                        <a href="../games.html">
+                            <div class="card-header text-uppercase text-center">
+                                <h1>Spacebar Counter Games</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../index.html'" title="spacebar counter" data-cf-modified-56977b04cd25e2a83ce8b9e6-="">
+                                <h5 class="text-white mb-0">Spacebar <br>Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-orange">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../5-seconds.html'" title="Spacebar Counter With Timer" data-cf-modified-56977b04cd25e2a83ce8b9e6-="">
+                                <h5 class="text-white mb-0">Second <br> Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ohhappiness">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../settime.html'" title="set timer Spacebar Counter" data-cf-modified-56977b04cd25e2a83ce8b9e6-="">
+                                <h5 class="text-white mb-0">Set Spacebar <br>Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ibiza">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../100-hits-score.html'" title="100 hits score" data-cf-modified-56977b04cd25e2a83ce8b9e6-="">
+                                <h5 class="text-white mb-0">Spacebar <br>Challenge</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../games.html'" title="Spacebar Games" data-cf-modified-56977b04cd25e2a83ce8b9e6-="">
+                                <h5 class="text-white mb-0">Spacebar <br> Games</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                </div>
+                <style>
+                    #flappyBlock {
+                        width: 90%;
+                        height: 450px;
+                        margin-top: 20px;
+                        margin-bottom: 5px;
+                    }
+                </style>
+                <div style="background-color: #909090;padding-top: 26px; padding-bottom: 35px; ">
+                    <center><canvas id="flappyBlock"></canvas></center>
+                    <div class="overlay toggle-menu"></div>
+                </div>
+            </div>
+            <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+            <div style="padding-bottom: 50px"></div>
+            <footer class="footer">
+                <div style="font-size: 16px">
+                    <div class="text-center" style="float: left;"> Copyright © 2022 <a href="../index.html" style="color: #ffa500;">spacebarcounter.org</a></div>
+                    <div class="text-center" style="float: right;"> <a class="text-white" href="../aboutus.html">About Us</a> | <a class="text-white" href="../contact.html">Contact Us</a> | <a class="text-white" href="../privacy-policy.html">Privacy Policy</a> | <a class="text-white" href="../terms-of-service.html">Terms of services</a></div>
+                </div>
+            </footer>
+        </div>
+        <script src="../static/assets/js/jquery.min.js" type="56977b04cd25e2a83ce8b9e6-text/javascript"></script>
+        <script src="../static/assets/js/popper.min.js" type="56977b04cd25e2a83ce8b9e6-text/javascript"></script>
+        <script src="../static/assets/js/bootstrap.min.js" type="56977b04cd25e2a83ce8b9e6-text/javascript"></script>
+        <script src="../static/assets/js/sidebar-menu.js" type="56977b04cd25e2a83ce8b9e6-text/javascript"></script>
+        <script src="../static/assets/js/app-script.js" type="56977b04cd25e2a83ce8b9e6-text/javascript"></script>
+        <script type="56977b04cd25e2a83ce8b9e6-text/javascript">
+            document.onkeydown = function(e) {
+                var keyCode = e.keyCode || e.charCode;
+                if (keyCode == 32) e.preventDefault();
+            };
+
+            var c = document.getElementById("flappyBlock");
+            var ctx = c.getContext("2d");
+
+            var WIDTH = window.innerWidth;
+            var HEIGHT = window.innerHeight;
+
+            c.width = WIDTH;
+            c.height = HEIGHT;
+
+            function JVector(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            JVector.prototype.add = function(vector) {
+                this.x += vector.x;
+                this.y += vector.y;
+            }
+
+            JVector.prototype.mult = function(scalar) {
+                this.x *= scalar;
+                this.y *= scalar;
+            }
+
+            JVector.prototype.div = function(scalar) {
+                this.x /= scalar;
+                this.y /= scalar;
+            }
+
+            JVector.prototype.mag = function() {
+                return Math.sqrt((this.x * this.x) + (this.y * this.y));
+            }
+
+            JVector.prototype.normalize = function() {
+                var m = this.mag();
+                this.div(m);
+            }
+
+            function Bird(posVec, velVec, accVec, size, maxSpeed, flapStrength) {
+                this.pos = posVec;
+                this.vel = velVec;
+                this.acc = accVec;
+
+                this.size = size;
+
+                this.maxSpeed = maxSpeed;
+
+                this.flapStrength = flapStrength;
+
+                this.flapping = false;
+            }
+
+            Bird.prototype.flap = function() {
+                this.vel = new JVector(this.vel.x, -this.flapStrength);
+            }
+
+            Bird.prototype.reset = function() {
+                this.pos = new JVector(0, HEIGHT / 2);
+                this.vel = new JVector(0, 0);
+            }
+
+            Bird.prototype.update = function() {
+                this.vel.add(this.acc);
+                this.pos.add(this.vel);
+                if (this.vel.mag() >= this.maxSpeed) {
+                    this.vel.normalize();
+                    this.vel.mult(this.maxSpeed);
+                }
+            }
+
+            Bird.prototype.display = function() {
+                ctx.fillStyle = "#fff";
+                ctx.fillRect(this.pos.x - this.size, this.pos.y - this.size, this.size, this.size);
+                if (!this.flapping) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.pos.x - this.size, this.pos.y - this.size);
+                    ctx.lineTo(this.pos.x - this.size / 2, this.pos.y - this.size - this.size);
+                    ctx.lineTo(this.pos.x, this.pos.y - this.size);
+                    ctx.closePath;
+                }
+                if (this.flapping) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.pos.x - this.size, this.pos.y);
+                    ctx.lineTo(this.pos.x - this.size / 2, this.pos.y + this.size);
+                    ctx.lineTo(this.pos.x, this.pos.y);
+                    ctx.closePath;
+                }
+                ctx.strokeStyle = "#fff";
+                ctx.stroke();
+            }
+
+            Bird.prototype.checkWorld = function() {
+                var x = this.pos.x;
+                var y = this.pos.y;
+                if (x <= 0) {
+                    this.pos.x = WIDTH;
+                } else if (x > WIDTH) {
+                    this.pos.x = 0;
+                }
+                if (y <= 0) {
+                    this.pos.y = 0 + this.size;
+                } else if (y > HEIGHT) {
+                    this.pos.y = HEIGHT;
+                }
+            }
+
+            Bird.prototype.frame = function() {
+                this.update();
+                this.checkWorld();
+                this.display();
+            }
+
+            function Obstacle(x) {
+                this.x = x;
+                this.height = (Math.random() * 2 - 1) * (HEIGHT / 2);
+                this.width = Math.random() * 50 + 20;
+            }
+
+            Obstacle.prototype.display = function() {
+                ctx.fillStyle = "#fff";
+                if (this.height >= 0) {
+                    ctx.fillRect(this.x - this.width / 2, 0, this.width, this.height);
+                } else if (this.height < 0) {
+                    ctx.fillRect(this.x - this.width / 2, HEIGHT + this.height, this.width, HEIGHT);
+                }
+                // console.log(this.x + ", " + this.height + ", " + this.width);
+            }
+
+            Obstacle.prototype.detectCollision = function(player) {
+                var playerX = player.pos.x;
+                var playerY = player.pos.y;
+
+                if (this.height >= 0) {
+                    if (playerX >= this.x - this.width / 2 && playerX <= this.x + this.width && playerY <= this.height) {
+                        console.log("Player Hit!");
+                        return true;
+                    }
+                } else if (this.height < 0) {
+                    if (playerX >= this.x - this.width / 2 && playerX <= this.x + this.width && playerY >= HEIGHT + this.height) {
+                        console.log("Player Hit!");
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function ObstacleManager(maxNum) {
+                this.maxNum = maxNum;
+                this.obstacles = [];
+
+                this.generateObstacles = function() {
+                    this.obstacles = [];
+                    for (var i = 0; i < this.maxNum; i++) {
+                        var xPos = ((i * WIDTH / this.maxNum) + Math.floor(Math.random() * 50)) + WIDTH / 4;
+                        this.obstacles.push(new Obstacle(xPos));
+                    }
+                }
+
+                this.renderObstacles = function() {
+                    for (var i = 0; i < this.obstacles.length; i++) {
+                        this.obstacles[i].display();
+                    }
+                }
+
+                this.detectCollisions = function(player) {
+                    for (var i = 0; i < this.obstacles.length; i++) {
+                        var collision = this.obstacles[i].detectCollision(player);
+                        if (collision) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            function Score() {
+                this.score = 0;
+
+                this.increment = function() {
+                    this.score += 100;
+                    console.log(this.score);
+                }
+
+                this.reset = function() {
+                    this.score = 0;
+                }
+
+                this.display = function() {
+                    ctx.fillStyle = "#fff";
+                    ctx.font = "20px Oswald";
+                    ctx.textAlign = "left";
+                    ctx.fillText("Score: " + this.score, 15, 35);
+                }
+            }
+
+            var bg = "#000";
+
+            var Game = function() {
+                this.startScreen = true;
+                this.playing = false;
+                this.gameOver = false;
+
+                this.locVec = new JVector(0, HEIGHT / 2);
+                this.velVec = new JVector(0, 0);
+                this.accVec = new JVector(0.1, 0.4);
+
+                this.score = new Score();
+
+                this.player = new Bird(this.locVec, this.velVec, this.accVec, 20, 12, 10);
+
+                this.obstacleManager = new ObstacleManager(5);
+
+                this.gravity = new JVector(0, .6);
+
+                this.startGame = function() {
+                    this.startScreen = false;
+                    this.playing = true;
+                    this.gameOver = false;
+                    this.obstacleManager.generateObstacles();
+                    this.player.reset();
+                }
+
+                this.killPlayer = function() {
+                    this.startScreen = false;
+                    this.playing = false;
+                    this.gameOver = true;
+                }
+
+                this.draw = function() {
+                    ctx.fillStyle = bg;
+                    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+                    if (this.startScreen) {
+                        ctx.strokeStyle = "#67ff08";
+                        ctx.fillStyle = "#fff";
+                        ctx.font = "48px Roboto,sans-serif";
+                        ctx.textAlign = "center";
+
+                        ctx.strokeText("Flappy Game", WIDTH / 2, HEIGHT / 2);
+                        ctx.strokeText("Spacebar Counter ", WIDTH / 2, HEIGHT / 4);
+                        ctx.font = "40px Roboto,sans-serif";
+                        ctx.fillText("Press 'S' to start the game!", WIDTH / 2, HEIGHT / 2 + 40);
+                        this.score.reset();
+                    }
+
+                    if (this.playing) {
+                        this.score.display();
+                        this.player.vel.add(this.gravity);
+                        this.obstacleManager.renderObstacles();
+                        var collision = this.obstacleManager.detectCollisions(this.player);
+                        if (collision) {
+                            this.killPlayer();
+                        }
+                        this.player.frame();
+                        if (this.player.pos.x == 0) {
+                            this.obstacleManager.generateObstacles();
+                            this.score.increment();
+                        }
+                    }
+
+                    if (this.gameOver) {
+                        ctx.strokeStyle = "#67ff08";
+                        ctx.fillStyle = "#fff";
+                        ctx.font = "60px Roboto,sans-serif";
+                        ctx.textAlign = "center";
+                        ctx.strokeText("Game over!", WIDTH / 2, HEIGHT / 4);
+                        ctx.font = "50px Roboto,sans-serif";
+                        ctx.fillText("Final Score: " + this.score.score, WIDTH / 2, HEIGHT / 2 + 40);
+                        ctx.font = "40px Roboto,sans-serif";
+                        ctx.fillText("Press 'S' to play again!", WIDTH / 2, HEIGHT / 2 + 80);
+                    }
+
+                    requestAnimationFrame(this.draw.bind(this));
+                }
+            }
+
+            var flappyBlock = new Game();
+            flappyBlock.draw();
+
+            window.addEventListener("resize", function() {
+                WIDTH = window.innerWidth;
+                HEIGHT = window.innerHeight;
+
+                c.width = WIDTH;
+                c.height = HEIGHT;
+            });
+
+            document.onkeydown = keyDown;
+            document.onkeyup = keyUp;
+
+            function keyDown(e) {
+                var event = e || window.event;
+                var key = event.keyCode;
+                if (key == 83 && !flappyBlock.playing) {
+                    flappyBlock.startGame();
+                    flappyBlock.score.reset();
+                }
+
+                if (key == 32 && !flappyBlock.player.flapping && flappyBlock.playing) {
+                    flappyBlock.player.flap();
+                    flappyBlock.player.flapping = true;
+                }
+            }
+
+            function keyUp(e) {
+                var event = e || window.event;
+                var key = event.keyCode;
+
+                if (key == 32 && flappyBlock.player.flapping) {
+                    flappyBlock.player.flapping = false;
+                }
+            }
+
+            function lerp(current, target, percent) {
+                return (target - current) * percent;
+            }
+            (function(d, s) {
+                d.getElementById("licnt9B4C").src =
+                    "https://counter.yadro.ru/hit?t14.6;r" + escape(d.referrer) +
+                    ((typeof(s) == "undefined") ? "" : ";s" + s.width + "*" + s.height + "*" +
+                        (s.colorDepth ? s.colorDepth : s.pixelDepth)) + ";u" + escape(d.URL) +
+                    ";h" + escape(d.title.substring(0, 150)) + ";" + Math.random()
+            })
+            (document, screen) <
+            !--
+            var dle_root = '../index.html';
+            var dle_group = 5;
+            var dle_skin = 'Red';
+            var dle_wysiwyg = '1';
+            var quick_wysiwyg = '0';
+            var dle_min_search = '4';
+            var dle_act_lang = ["Yes", "No", "Enter", "Cancel", "Save", "Delete", "Loading. Please, wait..."];
+            var menu_short = 'Quick edit';
+            var menu_full = 'Full edit';
+            var menu_profile = 'View profile';
+            var menu_send = 'Send message';
+            var menu_uedit = 'Admin Center';
+            var dle_info = 'Information';
+            var dle_confirm = 'Confirm';
+            var dle_prompt = 'Enter the information';
+            var dle_req_field = 'Please fill in all the required fields';
+            var dle_del_agree = 'Are you sure you want to delete it? This action cannot be undone';
+            var dle_spam_agree = 'Are you sure you want to mark the user as a spammer? This will remove all his comments';
+            var dle_c_title = 'Send a complaint';
+            var dle_complaint = 'Enter the text of your complaint to the Administration:';
+            var dle_mail = 'Your e-mail:';
+            var dle_big_text = 'Highlighted section of text is too large.';
+            var dle_orfo_title = 'Enter a comment to the detected error on the page for Administration ';
+            var dle_p_send = 'Send';
+            var dle_p_send_ok = 'Notification has been sent successfully ';
+            var dle_save_ok = 'Changes are saved successfully. Refresh the page?';
+            var dle_reply_title = 'Reply to the comment';
+            var dle_tree_comm = '0';
+            var dle_del_news = 'Delete article';
+            var dle_sub_agree = 'Do you really want to subscribe to this article’s comments?';
+            var dle_captcha_type = '0';
+            var DLEPlayerLang = {
+                prev: 'Previous',
+                next: 'Next',
+                play: 'Play',
+                pause: 'Pause',
+                mute: 'Mute',
+                unmute: 'Unmute',
+                settings: 'Settings',
+                enterFullscreen: 'Enable full screen mode',
+                exitFullscreen: 'Disable full screen mode',
+                speed: 'Speed',
+                normal: 'Normal',
+                quality: 'Quality',
+                pip: 'PiP mode'
+            };
+            var allow_dle_delete_news = false;
+            var dle_search_delay = false;
+            var dle_search_value = '';
+            jQuery(function($) {
+                FastSearch();
+            });
+            //-->
+            jQuery(function($) {
+                $.get("../templates/Red/images/sprite.html", function(data) {
+                    var div = document.createElement("div");
+                    div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+                    document.body.insertBefore(div, document.body.childNodes[0]);
+                });
+            });
+        </script>
+        <script type="56977b04cd25e2a83ce8b9e6-text/javascript">
+            var lazyadsense = !1;
+            window.addEventListener("scroll", function() {
+                (0 != document.documentElement.scrollTop && !1 === lazyadsense || 0 != document.body.scrollTop && !1 === lazyadsense) && (function() {
+                    var e = document.createElement("script");
+                    e.type = "text/javascript", e.async = !0, e.src = "../../pagead2.googlesyndication.com/pagead/js/f.txt";
+                    var a = document.getElementsByTagName("script")[0];
+                    a.parentNode.insertBefore(e, a)
+                }(), lazyadsense = !0)
+            }, !0);
+        </script>
+        
+        <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="56977b04cd25e2a83ce8b9e6-|49" defer=""></script>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6e49d1750a81009f","version":"2021.12.0","r":1,"token":"32d5d654abe34cf4b06ef6eca6fff24d","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

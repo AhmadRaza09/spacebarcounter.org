@@ -1,0 +1,710 @@
+<!DOCTYPE html><html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <link href="../static/assets/games/core.css" rel="stylesheet" />
+    <link href="../static/assets/games/typeography.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Space invaders is a fun game if you would like to play this game you can play this game in our spacebar counter tool." />
+    <meta name="keywords" content="space invaders, space invaders game, space bar clicker, spacebar counter">
+    <meta name="author" content="spacebarcounter.org" />
+    <title>Space Invaders | spacebar counter game| spacebarcounter.org</title>
+    <link rel="canonical" href="spaceinvaders.html">
+    <script type="62b2ff91808eb4c73711b413-text/javascript">
+        document.onkeydown = function(e) {
+            var keyCode = e.keyCode || e.charCode;
+            if (keyCode == 32) e.preventDefault();
+        };
+    </script>
+    <link rel="icon" href="../static/assets/images/spacebarcounter.png" type="#" alt="spacebarcounter">
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="../static/assets/css/sidebar-menu.css" rel="stylesheet" />
+    <link href="../static/assets/css/app-style.css" rel="stylesheet" />
+    <script type="62b2ff91808eb4c73711b413-text/javascript">
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MCX7PNZ');
+    </script>
+    <style>
+        .fa-mouse-pointer:before {
+            content: "\f245";
+        }
+
+        #gamecontainer {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        #gamecanvas {
+            width: 800px;
+            height: 600px
+        }
+
+        #info {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .text-white {
+            color: #fff !important
+        }
+
+        .mb-0,
+        .my-0 {
+            margin-bottom: 0 !important
+        }
+
+        .card {
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+            border: none;
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .col,
+        .col-1,
+        .col-10,
+        .col-11,
+        .col-12,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            padding-right: 12.5px;
+            padding-left: 12.5px
+        }
+
+        #info {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .h1,
+        h1 {
+            font-size: 30px !important;
+            line-height: 32px !important
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0
+        }
+
+        .text-uppercase {
+            text-transform: uppercase !important
+        }
+
+        .sidebar-menu>li.active>a,
+        .sidebar-menu>li:hover>a {
+            color: #fff;
+            background: rgba(255, 255, 255, .15)
+        }
+
+        @import "https://fonts.googleapis.com/css?family=Mukta|Roboto";
+
+        html {
+            font-family: Mukta, sans-serif;
+            font-family: Roboto, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        html {
+            height: 100%
+        }
+
+        @-ms-viewport {
+            width: device-width
+        }
+
+        body {
+            background-color: #3b3752;
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, .85);
+            letter-spacing: 1px
+        }
+
+        /*! * Bootstrap v4.3.1 (https://getbootstrap.com/) * Copyright 2011-2019 The Bootstrap Authors * Copyright 2011-2019 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #dc3545;
+            --orange: #fd7e14;
+            --yellow: #ffc107;
+            --green: #28a745;
+            --teal: #20c997;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        #wrapper.toggled .content-wrapper {
+            margin-left: 0
+        }
+
+        .content-wrapper {
+            margin-left: 250px;
+            padding-top: 70px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 70px;
+            overflow-x: hidden;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .content-wrapper {
+                margin-left: 0;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+
+            #wrapper.toggled .content-wrapper {
+                margin-left: 0
+            }
+        }
+
+        .logo-text {
+            color: #fff;
+            font-size: 15px;
+            display: inline-block;
+            text-transform: uppercase;
+            position: relative;
+            top: 3px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 50px
+        }
+
+        .sidebar-menu>li {
+            position: relative;
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent
+        }
+
+        a {
+            outline: 0 !important;
+            color: #fff
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            color: #fff
+        }
+
+        .waves-effect {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            vertical-align: middle;
+            z-index: 1;
+            will-change: opacity, transform;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            transition: all .3s ease-out
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        .row {
+            margin-right: -12.5px;
+            margin-left: -12.5px
+        }
+
+        .mt-3,
+        .my-3 {
+            margin-top: 1rem !important
+        }
+
+        .card {
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+            border: none;
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .gradient-deepblue {
+            background: #6a11cb;
+            background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc) !important;
+            background: linear-gradient(45deg, #6a11cb, #2575fc) !important
+        }
+
+        .gradient-orange {
+            background: #fc4a1a;
+            background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733) !important;
+            background: linear-gradient(45deg, #fc4a1a, #f7b733) !important
+        }
+
+        .gradient-ohhappiness {
+            background: #00b09b;
+            background: -webkit-linear-gradient(45deg, #00b09b, #96c93d) !important;
+            background: linear-gradient(45deg, #00b09b, #96c93d) !important
+        }
+
+        .icon-user:before {
+            content: "\e005";
+        }
+    </style>
+    <script type="62b2ff91808eb4c73711b413-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-YNZZV7ZPS8');
+    </script>
+    
+     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    
+     <link rel="stylesheet" href="../src/style.css" />
+    
+</head>
+
+<body class="bg-theme">
+    <div id="wrapper">
+        
+           <header class="topbar-nav">
+            <div class="navbar desktop-menu">
+                <div class="logo">
+                  <a href="#"><img src="../src/logo.png" alt="my-logo" /></a>
+                </div>
+                <div id="menuSection" class="menu-sec">
+                  <ul class="nav-menu">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="social-icons">
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-github"></i>
+                  <i class="fas fa-basketball-ball"></i>
+                </div>
+              </div>
+              <div
+                onclick="closeMobMenuToggle()"
+                id="mobMenuCont"
+                class="mob-menu-container"
+              >
+                <img src="../src/close.png" alt="close-icon" />
+              </div>
+              <div id="mobMenuWrap" class="mob-menu-wrap">
+                <div class="menu-content">
+                  <div class="menu-items">
+                    <ul class="nav-menu">
+                      <li><a class="active" href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="social-items">
+                    <div class="social-icons">
+                      <i class="fab fa-facebook"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-github"></i>
+                      <i class="fas fa-basketball-ball"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-menu">
+                <div class="logo">
+                  <a href="#"><img src="../src/logo.png" alt="my-logo" /></a>
+                </div>
+                <button onclick="mobMenuToggle()" class="menu"><i style="font-size:24px" class="fa">&#xf0c9;</i></button>
+              <script type="text/javascript" src="src/script.js"></script>
+
+              </div>
+        </header>
+    
+        
+        <div class="clearfix"></div>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="col-lg-12">
+                    <div class="card"> <a href="../games.html">
+                            <div class="card-header text-uppercase text-center">
+                                <h1>Spacebar Counter Games</h1>
+                            </div>
+                        </a></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../index.html'" title="spacebar counter" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Spacebar <br>Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-orange">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../5-seconds.html'" title="Spacebar Counter With Timer" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Second <br> Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ohhappiness">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../settime.html'" title="set timer Spacebar Counter" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Set Spacebar <br>Counter</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ibiza">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../100-hits-score.html'" title="100 hits score" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Spacebar <br>Challenge</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../games.html'" title="Spacebar Games" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Spacebar <br> Games</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center"></div>
+                <div id="starfield"></div>
+                <div style="background-color: #909090;padding-top: 26px; padding-bottom: 35px; ">
+                    <div id="gamecontainer"> <canvas id="gameCanvas" style="background-color: #000;"></canvas></div>
+                </div></br>
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header text-uppercase">
+                            <div>
+                                <p>Move with arrow keys <span class="ti-arrow-left"></span> <span class="ti-arrow-right"></span> or swipe, fire with the space bar. The invaders get faster and drop</p>
+                                <p> more bombs as you complete each level!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='dinosaur-runner.html'" title="Dinosaur Runner Game" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Dinosaur Runner</br> Game</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-orange">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='corona-runner.html'" title="Corona Runner Game" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Corona Runner</br> Game</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ohhappiness">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='flappy-bird.html'" title="Flappy Bird Game" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Flappy Bird</br> Game</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-ibiza">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='spaceinvaders.html'" title="Space Invaders Game" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Space Invaders</br> Game</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="card gradient-deepblue">
+                            <div class="card-body" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='../games.html'" title="spacebar Game" data-cf-modified-62b2ff91808eb4c73711b413-="">
+                                <h5 class="text-white mb-0">Spacebar</br> Game</h5>
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="height: auto !important;">
+                    <div class="col-md-12">
+                        <div class="card mt-3 p-2">
+                            <div class="card-body">
+                                <p>A <a href="spaceinvaders.html" style="color: #ffa500;">space invader</a> is a game developed by Japanese engineers and launched in 1978. This game consists of two layers, space and the lower layer. Our space is full of elements like stars, moon, planets, comets, etc. However, these invaders are full of fun and entertainment. This game is quick and easy to play in pass time to rehearse the spacebar test.</p>
+                            </div>
+                            <div class="card-header">
+                                <h4>What is the purpose of this game?</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>The basic idea of this game is to protect our spaceship and kill the invaders. There are numerous ranks in this game. Once you complete one level, you will switch to the next one. Beginning levels are a little easy to play, but you will find the next level even more challenging to beat the game as you level up. </p>
+                                <p>We have already said it is the easiest way to practice your <a href="../index.html" style="color: #ffa500;">space bar counter</a>. So from this, you will understand that it uses the spacebar key. This game is tough to beat on the first try, so practice well. Moreover, you must consider with each level, the invaders get faster and drop more bombs! </p>
+                                <p>As you level up, you will start to understand that the game is difficult and impossible to pass on the first try. With every level, the invaders get quicker and fall more additional bombs! Consequently, it would be best if you played with more concentration. </p>
+                            </div>
+                            <div class="card-header">
+                                <h4>Keys to use to play the Space invader game: </h4>
+                            </div>
+                            <div class="card-body">
+                                <p>To move right and left user arrows (<--) and (-->). If you want to fire on the opponent, use the spacebar key.</p>
+                            </div>
+                            <div class="card-header">
+                                <h4>Why must you play this game?</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>This game allows you to play using the spacebar key it enhances the clicking speed from average to faster.</li>
+                                    <li>You can polish your gaming skill, and you can perform better in other games too.</li>
+                                    <li>It can help you to raise your concentration while playing the game.</li>
+                                    <li>You can easily pass the time by playing this game in your free time. </li>
+                                </ul>
+                            </div>
+                            <div class="card-header">
+                                <h4>How to score high in space invaders?</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Scoring high points in the space invader game is not impossible; however, it takes time to practice and requires consistency. Also, to score more, you should have an average spacebar clicking speed. </p>
+                            </div>
+                            <div class="card-header">
+                                <h4>Highest score of space invader game?</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Richie Knucklez of New Jersey, USA, has scored the highest score. He holds a world record with 184,870 points. </p>
+                            </div>
+                            <div class="card-header">
+                                <h4>The popularity of the game:</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>This game is famous because of the kind of adventure it has. Also, space invader recently celebrated its 40th anniversary, and from this, you can get an idea about its popularity. The space invader has gone through many transformations and will continue to go in the future. This game is fun and helps you polish and entertainingly improve your gaming skills. </p>
+                            </div>
+                            <div class="card-header">
+                                <h4>Final thought:</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Space invader has been around the market and leading in the frontline of the game industry. To play this game, you have to select the space invader option in the list and start playing it. This game helps you enhance your spacebar clicking speed in a fun and interesting way. Keep playing!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../static/assets/games/starfield.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+                <script src="../static/assets/games/spaceinvaders.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+                <script type="62b2ff91808eb4c73711b413-text/javascript">
+                    document.getElementById("starfield").style.display = "none";
+                    var container = document.getElementById('starfield');
+                    var starfield = new Starfield();
+                    starfield.initialise(container);
+                    starfield.start();
+                    var canvas = document.getElementById("gameCanvas");
+                    canvas.width = 800;
+                    canvas.height = 600;
+                    var game = new Game();
+                    game.initialise(canvas);
+                    game.start();
+                    window.addEventListener("keydown", function keydown(e) {
+                        var keycode = e.which || window.event.keycode;
+                        if (keycode == 37 || keycode == 39 || keycode == 32) {
+                            e.preventDefault();
+                        }
+                        game.keyDown(keycode);
+                    });
+                    window.addEventListener("keyup", function keydown(e) {
+                        var keycode = e.which || window.event.keycode;
+                        game.keyUp(keycode);
+                    });
+                    window.addEventListener("touchstart", function(e) {
+                        game.touchstart(e);
+                    }, false);
+                    window.addEventListener('touchend', function(e) {
+                        game.touchend(e);
+                    }, false);
+                    window.addEventListener('touchmove', function(e) {
+                        game.touchmove(e);
+                    }, false);
+
+                    function toggleMute() {
+                        game.mute();
+                        document.getElementById("muteLink").innerText = game.sounds.mute ? "unmute" : "mute";
+                    }
+                </script>
+                <div class="overlay toggle-menu"></div>
+            </div> <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+            <div style="padding-bottom: 50px"></div>
+            <footer class="footer">
+                <div style="font-size: 16px">
+                    <div class="text-center" style="float: left;"> Copyright © 2022 <a href="../index.html" style="color: #ffa500;">spacebarcounter.org</a></div>
+                    <div class="text-center" style="float: right;"> <a class="text-white" href="../aboutus.html">About Us</a> | <a class="text-white" href="../contact.html">Contact Us</a> | <a class="text-white" href="../privacy-policy.html">Privacy Policy</a> | <a class="text-white" href="../terms-of-service.html">Terms of services</a></div>
+                </div>
+            </footer>
+        </div>
+        <script src="../static/assets/js/jquery.min.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+        <script src="../static/assets/js/popper.min.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+        <script src="../static/assets/js/bootstrap.min.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+        <script src="../static/assets/js/sidebar-menu.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+        <script src="../static/assets/js/app-script.js" type="62b2ff91808eb4c73711b413-text/javascript"></script>
+        <script type="62b2ff91808eb4c73711b413-text/javascript">
+            < script > document.onkeydown = function(e) {
+                var keyCode = e.keyCode || e.charCode;
+                if (keyCode == 32) e.preventDefault();
+            };
+        </script>
+        </script>
+        <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="62b2ff91808eb4c73711b413-|49" defer=""></script>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6e49d176fba4976f","version":"2021.12.0","r":1,"token":"32d5d654abe34cf4b06ef6eca6fff24d","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
